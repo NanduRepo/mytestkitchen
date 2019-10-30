@@ -1,0 +1,118 @@
+<html>
+<head>
+<style>
+button{background-color:limegreen; 
+padding:15px 32px;
+color:white;
+font-size:16px;
+margin:4px 2px;}
+div{
+background-color:black;
+width:400px;
+height:550px;
+color:white;
+top:10%;
+left:47%;
+position:absolute;
+transform:tranlate(-25%,-25%);
+box-sizing:border-box;
+filter:alpha(opacity=40);
+opacity:0.6;
+}
+background
+{background-size:cover;}
+a{text-decoration:none;
+color:white;}
+
+</style></head>
+<body align="center" background="I:\wd project\project wd images/glass.jpg">
+
+<form  name="myform" action="login.html" onsubmit="return validate()" method="post" >
+
+<div class="container">
+<h1><font color="magenta">Sign Up</font></h1>
+<hr>
+<h4><p align="left">&nbsp &nbsp
+<input type="checkbox" name="name">Already a print subscriber?</input><br><br></p>
+<b>First Name:</b>&nbsp &nbsp &nbsp &nbsp<input type="text"name="name1"placeholder="Enter your Name"/><br><br>
+<b>Last Name:</b>&nbsp &nbsp &nbsp &nbsp<input type="text"name="name2"placeholder="Enter your Name"/><br><br>
+<b>Phone Number:</b><input type="text"name="number"pattern="^\d{10}$" placeholder="Enter your Number"/><br><br>
+<label for="email:"><b>Email:</b></label>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<input type="email"  name="email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="abc@gmail.com"/><br><br>
+
+<lable for="password:">
+<b>Password:</b></lable>&nbsp &nbsp &nbsp &nbsp &nbsp
+<input type="password" name="password" placeholder="Password"/>
+<lable><br><br>
+<b>Favorite Food</b>&nbsp &nbsp<input type="text"name="food"/></h4>
+
+<p align="left">&nbsp &nbsp<input type="checkbox" checked="checked" name="remember"style="margin-bottom:15px">
+Remember me</p></lable>
+<lable>
+<p align="left"> &nbsp &nbsp<a href="forgot.html">Forgot password?</a></p></lable><br></h1>
+<button onclick="validate()">Sign Up</button>
+</div></form>
+<a href=1.html><h1>Home</h1></a>
+
+<script>
+function validate()
+{
+var x=document.forms["myform"]["name1"].value;
+if(x=="")
+{alert("Enter First Name");
+return false;
+}
+var x=document.forms["myform"]["name2"].value;
+if(x=="")
+{alert("Enter Last Name");
+return false;
+}
+var x=document.forms["myform"]["number"].value;
+if(x=="")
+{alert("Enter Phone Number");
+return false;
+}
+var x=document.forms["myform"]["email"].value;
+if(x=="")
+{alert("Enter mail id");
+return false;
+}
+var x=document.forms["myform"]["password"].value;
+if(x=="")
+{alert("Enter Password");
+return false;
+}
+var x=document.forms["myform"]["food"].value;
+if(x=="")
+{alert("Enter your favourite Food");
+return false;
+}
+{
+var a=document.myform.number.value;
+if(a=="")
+{alert("Enter the valid Mobile Number");
+document.myform.number.focus();
+return false;
+}
+if(isNaN(a))
+{
+alert("Enter the valid Mobile Number(Like : 9566137117)");
+document.myForm.number.focus();
+return false;
+}
+
+if((a.length < 10) || (a.length > 10))
+{
+alert(" Your Mobile Number must be 10 Integers");
+document.myForm.number.select();
+return false;
+}
+alert("You Successfully Signed up!!");
+}
+}
+
+</script>
+</body>
+</html>
+
+

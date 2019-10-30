@@ -1,0 +1,68 @@
+<html>
+<head>
+<style>
+button{background-color:red; 
+padding:15px 32px;
+color:white;
+font-size:16px;
+margin:6px 2px;}
+div{
+background-color:#ffffff;
+width:400px;
+height:500px;
+color:black;
+top:10%;
+left:47%;
+position:absolute;
+transform:tranlate(-25%,-25%);
+box-sizing:border-box;
+filter:alpha(opacity=40);
+opacity:0.6;
+font-weight:bold;
+}
+a{text-decoration:none;
+color:white;}
+</style></head>
+<body align="center" background="C:\Users\admin\Desktop\wd project\project wd images/glassf.jpg">
+
+<form name="myform" onsubmit="return validate()"method="post" style="border:1px solid #ccc">
+
+<div class="container">
+<h1><font color="red">Login</font></h1>
+<hr>
+<h3><p align="left">&nbsp &nbsp
+<input type="checkbox" name="name">Already a print subscriber?</input><br><br></h3></p>
+<h1><label for="username"><b>User Name</b></label>
+<input type="email"name="email"placeholder="abc@gmail.com"/><br><br>
+
+<lable for="password">
+<b>Password</b></lable>&nbsp &nbsp
+<input type="password"placeholder="Password" name="password"/>
+<lable><br><br></h1>
+
+<p align="left">&nbsp &nbsp<input type="checkbox" checked="checked" name="remember"style="margin-bottom:15px">
+Remember me</lable><br></p>
+<lable>
+<p align="left">&nbsp &nbsp<a href="forgot.html">Forgot password?</a></lable><br></p>
+<button onclick="validate()"><a href="recipes.html">SUBMIT</a></button></div></form>
+<a href=1.html><h1>Home</h1></a>
+<script>
+function validate()
+{
+var x=document.forms["myform"]["name"].value;
+if(x=="")
+{alert("please enter your username id");
+return false;
+}
+var x=document.forms["myform"]["password"].value;
+if(x=="")
+{alert("please enter your password");
+return false;
+
+alert("Now you are valid user");}
+}
+</script>
+</body>
+</html>
+
+
